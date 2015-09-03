@@ -2,7 +2,6 @@ FROM inanimate/steamcmd-play
 
 ENV GAME_NAME hl1mp
 ENV GAME_ID 255470
-ENV GAME_LAUNCHER srcds_run
 
 ENV GAME_PATH ${STEAMCMD_LOC}/${GAME_NAME}
 
@@ -10,5 +9,6 @@ RUN ${STEAMCMD} +login anonymous +force_install_dir ${GAME_PATH} +app_update ${G
 
 WORKDIR ${GAME_PATH}
 
-ENTRYPOINT ["./${GAME_LAUNCHER}", "-game ${GAME_NAME}"]
+ENTRYPOINT ["./srcds_run", "-game hl1mp"]
 
+CMD ["+sv_lan", "1", "+map", "crossfire"]

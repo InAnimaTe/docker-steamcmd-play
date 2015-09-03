@@ -32,4 +32,4 @@ WORKDIR ${STEAMCMD_LOC}
 
 USER ${RUNUSER}
 
-ENTRYPOINT ["${STEAMCMD}"]
+ENTRYPOINT ["/home/daemon/steamcmd/steamcmd.sh"]
