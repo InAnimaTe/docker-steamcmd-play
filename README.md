@@ -30,6 +30,8 @@ docker run -d -p 27000-27015:27000-27015/udp -p 27015:27015 inanimate/steamcmd-p
 
 The container will then launch, the dedicated server will start, and you're ready to join up, suit up, and fight!
 
+> You can also keep local cache with [steamcache](https://github.com/steamcache/steamcache), which makes LAN'ing even better!
+
 #### Useful startup options
 
 Because `srcds` is pretty awesome, you can easily pass command line [options](https://developer.valvesoftware.com/wiki/Command_Line_Options#Source_Dedicated_Server) to the server daemon. Here are a few useful examples:
